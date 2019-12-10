@@ -35,7 +35,7 @@ public class BioServerHandler implements Runnable{
 
             while ((msg=br.readLine())!=null){
                 System.out.println("Server accept message:"+msg);
-                result= ConstantInfo.repsonse(msg);
+                result= ConstantInfo.response(msg);
                 //通过输出流返回给客户端
                 pw.println(result);
             }

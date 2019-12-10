@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @create 2019-10-16 10:14
  */
 public class NioClient {
-    private static NioClientHandle nioClientHandle;
+    private static NioClientHandler nioClientHandle;
 
     public static void main(String[] args) throws IOException {
         start();
@@ -30,7 +30,7 @@ public class NioClient {
         if(nioClientHandle!=null){
             nioClientHandle.stop();
         }
-        nioClientHandle=new NioClientHandle(ConstantInfo.DEFAULT_SERVER_IP,ConstantInfo.DEFAULT_PORT);
+        nioClientHandle=new NioClientHandler(ConstantInfo.DEFAULT_SERVER_IP,ConstantInfo.DEFAULT_PORT);
         new Thread(nioClientHandle,"client").start();
     }
 }

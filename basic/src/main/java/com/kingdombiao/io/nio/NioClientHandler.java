@@ -17,7 +17,7 @@ import java.util.Set;
  * @author biao
  * @create 2019-10-16 9:26
  */
-public class NioClientHandle implements Runnable {
+public class NioClientHandler implements Runnable {
 
     private String ip;
     private int port;
@@ -27,7 +27,7 @@ public class NioClientHandle implements Runnable {
     //客户端是否启动成功
     private volatile boolean started;
 
-    public NioClientHandle(String ip, int port) {
+    public NioClientHandler(String ip, int port) {
         this.ip = ip;
         this.port = port;
 
